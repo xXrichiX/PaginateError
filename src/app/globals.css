@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Paleta de marca: cálida y empática para páginas de error */
+:root {
+  --background: #f5ebe0;
+  --foreground: #3d2c29;
+  --paper: #faf6f2;
+  --ink: #3d2c29;
+  --ink-muted: #7d6e5c;
+  --accent: #b87333;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1c1917;
+    --foreground: #e7e5e4;
+    --paper: #292524;
+    --ink: #e7e5e4;
+    --ink-muted: #a8a29e;
+    --accent: #d97706;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
